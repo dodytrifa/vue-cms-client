@@ -11,9 +11,6 @@
         <label for="exampleInputPassword1" class="form-label">Password</label>
         <input v-model ="password" type="password" class="form-control" id="password">
       </div>
-      <div class="to-register-page" id="toRegister" style="cursor: pointer;">
-        <a>Click here to create account</a>
-      </div><br>
       <button type="submit" class="btn btn-primary">Submit</button><br><br>
     </form>
   </div>
@@ -43,7 +40,6 @@ export default {
         .catch(err => {
           console.log(err.response)
         })
-    //   console.log(this.email, this.password)
     }
   }
 }

@@ -6,14 +6,14 @@
         <button
         @click='toAdd'
           class="btn btn-success rounded-pill"
-          type="submit"
+          type="button"
         >
           Add Product
         </button>
         <button
           @click.prevent="logout"
           class="margin-right-20 btn btn-danger rounded-pill"
-          type="submit"
+          type="button"
         >
           Logout
         </button>
@@ -23,13 +23,12 @@
     <div class="row">
     <product-card v-for='product in products' :key='product.id' :product='product'/>
     </div>
-    <!-- {{products}} -->
   </div>
 </div>
 </template>
 <script>
 import ProductCard from '../components/ProductCard.vue'
-// import axios from '../api/axios'
+
 export default {
   name: 'Products',
   components: {
@@ -38,6 +37,11 @@ export default {
   methods: {
     toAdd () {
       this.$router.push('/addproduct')
+    },
+    logout () {
+      localStorage.clear()
+      this.$store.commit('CHANGEISLOGIN', false)
+      this.$router.push('/')
     }
   },
   created () {

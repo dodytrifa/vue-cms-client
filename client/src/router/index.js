@@ -1,28 +1,21 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
-// import Products from '../views/Products.vue'
+import Products from '../views/Products.vue'
 import EditForm from '../views/EditForm.vue'
 import AddForm from '../views/AddForm.vue'
-
+import LoginForm from '../views/LoginForm.vue'
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
-    name: 'Home',
-    component: Home
+    name: 'Login Form',
+    component: LoginForm
   },
   {
     path: '/products',
     name: 'Products',
-    // component: 'Products'
-    component: () => import(/* webpackChunkName: "about" */ '../views/Products.vue')
-  },
-  {
-    path: '/login',
-    name: 'Login',
-    component: () => import(/* webpackChunkName: "about" */ '../views/Login.vue')
+    component: Products
   },
   {
     path: '/products/:id',
