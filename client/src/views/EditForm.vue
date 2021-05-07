@@ -1,29 +1,27 @@
 <template>
-<div class="p-20 container">
-  <div class="d-flex justify-content-center">
-        <form @submit.prevent='submitEdit' id="edit-form">
+  <div class="d-flex flex-column min-vh-100 justify-content-center align-items-center">
+    <form @submit.prevent='submitEdit' id="edit-form">
       <h3>Edit Product Form</h3><br>
-            <div class="mb-3 ">
-              <label class="form-label">Product name</label>
-              <input v-model='name' type="text" class="form-control" aria-describedby="emailHelp">
-            </div>
-            <div class="mb-3 ">
-              <label class="form-label">Product image-url</label>
-              <input v-model='image_url' type="text" class="form-control" aria-describedby="emailHelp">
-            </div>
-            <div class="mb-3 ">
-              <label class="form-label">Product price</label>
-              <input v-model='price' type="text" class="form-control" aria-describedby="emailHelp">
-            </div>
-            <div class="mb-3 ">
-              <label class="form-label">Product stock</label>
-              <input v-model='stock' type="text" class="form-control" aria-describedby="emailHelp">
-            </div>
-            <button type="submit" class="btn btn-primary">Submit</button><br><br>
-            <button @click='undoEdit' type="submit" class="btn btn-secondary">Back To Previous Page</button><br><br>
-          </form>
-      </div>
-</div>
+        <div class="mb-3 ">
+          <label class="form-label">Product name</label>
+          <input v-model='name' type="text" class="form-control" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3 ">
+          <label class="form-label">Product image-url</label>
+          <input v-model='image_url' type="text" class="form-control" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3 ">
+          <label class="form-label">Product price</label>
+          <input v-model='price' type="text" class="form-control" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3 ">
+          <label class="form-label">Product stock</label>
+          <input v-model='stock' type="text" class="form-control" aria-describedby="emailHelp">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button><br><br>
+        <button @click='undoEdit' type="submit" class="btn btn-secondary">Back To Previous Page</button><br><br>
+    </form>
+  </div>
 </template>
 
 <script>

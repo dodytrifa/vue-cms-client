@@ -1,9 +1,9 @@
 <template>
-  <div class="d-flex justify-content-center">
+  <div class="d-flex flex-column min-vh-100 justify-content-center align-items-center">
     <form @submit.prevent='submitLogin' id="login-form">
-      <h3>Welcome to Gadget Store</h3><br>
-      <h2>Login</h2>
-      <div class="mb-3 ">
+      <h3 class="mb-5">Welcome to Gadget Store CMS Page</h3>
+      <h2 class="mb-5">Please login</h2>
+      <div class="mb-3">
         <label for="exampleInputEmail1" class="form-label">Email address</label>
         <input v-model="email" type="email" class="form-control" id="email" aria-describedby="emailHelp">
       </div>

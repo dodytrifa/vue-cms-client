@@ -1,6 +1,6 @@
 <template>
 <div>
-  <div class="d-flex justify-content-center">
+  <div class="d-flex flex-column min-vh-100 justify-content-center align-items-center">
         <form @submit.prevent='submitAdd' id="add-form">
       <h3>Add Product Form</h3><br>
             <div class="mb-3 ">
